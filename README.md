@@ -46,7 +46,7 @@ document.querySelector('input').addEventListener('change', function () {
 ```
 
 ## API
-scinder's API is moslty promised based to get rid of the unnecessary callbacks.
+scinder's API is mostly promise based to get rid of the unnecessary callbacks.
 Here is a list of the functions available and how to use them
 
 ### scinder.getSegments(context, audioBuffer, times, durations)
