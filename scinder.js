@@ -124,7 +124,7 @@
     scinder.packAudioBuffers = packAudioBuffers
 
     const getAudioBuffer = (file) => {
-        context = new AudioContext()
+        const context = new AudioContext()
         const reader = new FileReader()
 
         return new Promise((resolve, reject) => {
@@ -144,8 +144,6 @@
     scinder.getAudioBuffer = getAudioBuffer
 
     const sliceAndPack = (file, times, durations) => {
-        const context = new AudioContext()
-        const reader = new FileReader()
 
         return getAudioBuffer(file)
         .then(({audioBuffer, context}) => {
@@ -154,6 +152,7 @@
 
             return{pack: packAudioBuffers(context, smoothenSegments, 2), context}
         }, e => console.error(e))
+        
     }
     scinder.sliceAndPack = sliceAndPack
 
