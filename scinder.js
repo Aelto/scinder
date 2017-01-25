@@ -88,7 +88,7 @@
     scinder.smoothenSegment = smoothenSegment
 
     const packAudioBuffers = (context, audioBuffers, silenceBetween = 0) => {
-        flooredSilenceBetween = Math.floor(silenceBetween)
+        const flooredSilenceBetween = Math.floor(silenceBetween)
 
         let totalLength = 0
         audioBuffers.forEach(b => totalLength += b.length)
