@@ -143,6 +143,19 @@
     }
     scinder.getAudioBuffer = getAudioBuffer
 
+    const getArrayBuffer = (file) => {
+        const reader = new FileReader()
+
+        return new Promise((resolve, reject) => {
+
+            reader.onload = function() {
+                resolve(this.result)
+            }
+            reader.readAsArrayBuffer(file)
+        })
+    }
+    scinder.getArrayBuffer = getArrayBuffer
+
     const sliceAndPack = (file, times, durations) => {
 
         return getAudioBuffer(file)
