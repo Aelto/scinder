@@ -19,7 +19,7 @@ imagine an html file like this:
     <head>
         <meta charset="utf-8">
 
-        <title>qrlogin | client</title>
+        <title>scinder | client</title>
     </head>
     <body>
 
